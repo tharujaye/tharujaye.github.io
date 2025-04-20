@@ -1,4 +1,3 @@
-
 import React, { useEffect, useState } from 'react';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
@@ -7,6 +6,7 @@ import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
 import { ExternalLink } from 'lucide-react';
 import { cn } from '@/lib/utils';
+import CaseStudies from '@/components/case-studies/CaseStudies';
 
 interface Project {
   id: number;
@@ -20,7 +20,6 @@ interface Project {
 const PortfolioPage: React.FC = () => {
   const [activeFilter, setActiveFilter] = useState<string>('all');
   
-  // Scroll to top on page load
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -202,6 +201,9 @@ const PortfolioPage: React.FC = () => {
             </AnimatedSection>
           </div>
         </section>
+
+        {/* Case Studies Section */}
+        <CaseStudies />
       </main>
       <Footer />
     </div>
