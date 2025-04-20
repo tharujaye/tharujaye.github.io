@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import AnimatedSection from '../shared/AnimatedSection';
@@ -16,6 +17,7 @@ interface Project {
 const Portfolio: React.FC = () => {
   const [activeFilter, setActiveFilter] = useState<string>('all');
 
+  // Updated projects array to match with the shared data
   const projects: Project[] = [
     {
       id: 1,
