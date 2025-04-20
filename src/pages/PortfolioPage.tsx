@@ -186,24 +186,26 @@ const PortfolioPage: React.FC = () => {
                 </AnimatedSection>
               ))}
             </div>
-
-            {/* CTA Section */}
-            <AnimatedSection className="text-center mt-20">
-              <div className="bg-card border border-border p-12 rounded-xl">
-                <h2 className="text-3xl font-bold mb-4">Interested in working together?</h2>
-                <p className="text-muted-foreground max-w-2xl mx-auto mb-8">
-                  I'm always open to discussing new projects, creative ideas or opportunities to be part of your vision.
-                </p>
-                <Button asChild size="lg">
-                  <Link to="/contact">Start a Conversation</Link>
-                </Button>
-              </div>
-            </AnimatedSection>
           </div>
         </section>
 
         {/* Case Studies Section */}
         <CaseStudies />
+
+        {/* CTA Section */}
+        <AnimatedSection className="text-center py-20">
+          <div className="container">
+            <div className="bg-card border border-border p-12 rounded-xl">
+              <h2 className="text-3xl font-bold mb-4">Interested in working together?</h2>
+              <p className="text-muted-foreground max-w-2xl mx-auto mb-8">
+                I'm always open to discussing new projects, creative ideas or opportunities to be part of your vision.
+              </p>
+              <Button asChild size="lg">
+                <Link to="/contact">Start a Conversation</Link>
+              </Button>
+            </div>
+          </div>
+        </AnimatedSection>
       </main>
       <Footer />
     </div>
