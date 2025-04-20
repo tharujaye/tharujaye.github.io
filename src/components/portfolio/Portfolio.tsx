@@ -42,10 +42,10 @@ const Portfolio: React.FC = () => {
     },
     {
       id: 4,
-      title: 'Ceytique',
-      category: ['Branding'],
-      image: '/projects/Ceytique_dp.jpg',
-      link: 'https://ceytique.com',          
+      title: 'Energex',
+      category: ['UI/UX', 'Mobile'],
+      image: '/projects/Energex_dp.jpg.jpg',
+      link: 'https://www.behance.net/gallery/224098755/Energex-Electricity-Management-App',          
     },
     {
       id: 5,
@@ -56,10 +56,10 @@ const Portfolio: React.FC = () => {
     },
     {
       id: 6,
-      title: 'Health Tracker Dashboard',
-      category: ['UI/UX', 'Web'],
-      image: '/placeholder.svg',
-      link: 'https://www.behance.net/gallery/123456789/Health-Tracker-Dashboard', 
+      title: 'FoCofi',
+      category: ['UI/UX', 'Mobile'],
+      image: '/projects/FoCofi_dp.jpg',
+      link: '', 
     },
   ];
 
