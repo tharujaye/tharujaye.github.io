@@ -150,33 +150,38 @@ const PortfolioPage: React.FC = () => {
                   animation="fade-in"
                   delay={200 + (index % 3) * 100}
                 >
-                  <div className="group relative overflow-hidden rounded-xl">
-                    <div className="aspect-video overflow-hidden">
-                      <img 
-                        src={project.image} 
-                        alt={project.title} 
-                        className="w-full h-full object-cover transition duration-500 group-hover:scale-110" 
-                      />
+                  <div className="flex flex-col gap-4">
+                    <div className="group relative overflow-hidden rounded-xl">
+                      <div className="aspect-video overflow-hidden">
+                        <img 
+                          src={project.image} 
+                          alt={project.title} 
+                          className="w-full h-full object-cover transition duration-500 group-hover:scale-110" 
+                        />
+                      </div>
+                      
+                      <div className="absolute inset-0 bg-foreground/60 transition-opacity opacity-0 group-hover:opacity-100 flex items-center justify-center">
+                        <Button asChild variant="secondary" size="sm" className="w-fit">
+                          <Link to={project.link} className="flex items-center gap-1">
+                            View Project <ExternalLink size={14} />
+                          </Link>
+                        </Button>
+                      </div>
                     </div>
-                    
-                    <div className="absolute inset-0 bg-gradient-to-t from-foreground/90 via-foreground/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-6">
-                      <h3 className="text-xl font-bold text-white mb-2">{project.title}</h3>
-                      <p className="text-white/80 mb-4 line-clamp-2">{project.description}</p>
-                      <div className="flex flex-wrap gap-2 mb-4">
+
+                    <div className="flex flex-col gap-2">
+                      <h3 className="text-xl font-bold">{project.title}</h3>
+                      <p className="text-muted-foreground mb-2">{project.description}</p>
+                      <div className="flex flex-wrap gap-2">
                         {project.category.map(cat => (
                           <span 
                             key={cat} 
-                            className="px-3 py-1 bg-primary/20 text-white text-xs rounded-full"
+                            className="px-3 py-1 bg-muted text-xs rounded-full"
                           >
                             {cat}
                           </span>
                         ))}
                       </div>
-                      <Button asChild variant="secondary" size="sm" className="w-fit">
-                        <Link to={project.link} className="flex items-center gap-1">
-                          View Project <ExternalLink size={14} />
-                        </Link>
-                      </Button>
                     </div>
                   </div>
                 </AnimatedSection>
