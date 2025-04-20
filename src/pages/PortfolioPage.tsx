@@ -1,4 +1,3 @@
-
 import React, { useEffect, useState } from 'react';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
@@ -52,51 +51,44 @@ const PortfolioPage: React.FC = () => {
     },
     {
       id: 4,
-      title: 'Ceytique',
-      description: 'Complete brand identity for a luxury tea company.',
-      category: ['Branding'],
-      image: '/projects/Ceytique_dp.jpg',
-      link: 'https://ceytique.com',          
+      title: 'Energex',
+      description: 'Electricity management app for efficient energy consumption.',
+      category: ['UI/UX', 'Mobile'],
+      image: '/projects/Energex_dp.jpg',
+      link: 'https://www.behance.net/gallery/224098755/Energex-Electricity-Management-App',          
     },
     {
       id: 5,
       title: 'BraveSpace',
-      description: 'Mental health support and community platform.',
+      description: 'Therapy app designed to create a safe space for users.',
       category: ['UI/UX', 'Mobile'],
-      image: '/placeholder.svg',
-      link: 'https://www.behance.net/gallery/123456789/BraveSpace', 
+      image: '/projects/BraveSpace_dp.jpg',
+      link: 'https://www.behance.net/gallery/224099153/BraveSpace-Thearaphy-app', 
     },
     {
       id: 6,
-      title: 'Health Tracker Dashboard',
-      description: 'Personal health monitoring platform with data visualization.',
-      category: ['UI/UX', 'Web'],
-      image: '/placeholder.svg',
-      link: 'https://www.behance.net/gallery/123456789/Health-Tracker-Dashboard', 
+      title: 'FoCofi',
+      description: 'Productivity Focus App with LoFi music.',
+      category: ['UI/UX', 'Mobile'],
+      image: '/projects/FoCofi_dp.jpg',
+      link: '',    
     },
+      
     {
       id: 7,
-      title: 'Finance Dashboard UI',
-      description: 'A comprehensive dashboard for financial data visualization and analysis.',
-      category: ['UI/UX', 'Web'],
-      image: '/placeholder.svg',
-      link: '/portfolio/finance-dashboard',
+      title: 'Ceytique',
+      description: 'Modern luxury clothing brand designed for those who seek exclusivity and style.',
+      category: ['Branding'],
+      image: '/projects/Ceytique_dp.jpg',
+      link: 'https://ceytique.com',
     },
     {
       id: 8,
-      title: 'Social Media Platform',
-      description: 'Design and development of a niche social platform for creators.',
-      category: ['UI/UX', 'Web'],
-      image: '/placeholder.svg',
-      link: '/portfolio/social-media-platform',
-    },
-    {
-      id: 9,
-      title: 'Coffee Shop Brand Identity',
-      description: 'Complete branding package for an artisanal coffee chain.',
+      title: 'Bookshelf',
+      description: 'eCommerce book store.',
       category: ['Branding'],
       image: '/placeholder.svg',
-      link: '/portfolio/coffee-branding',
+      link: 'https://bookshelf.lk',
     },
   ];
 
@@ -162,9 +154,14 @@ const PortfolioPage: React.FC = () => {
                       
                       <div className="absolute inset-0 bg-foreground/60 transition-opacity opacity-0 group-hover:opacity-100 flex items-center justify-center">
                         <Button asChild variant="secondary" size="sm" className="w-fit">
-                          <Link to={project.link} className="flex items-center gap-1">
+                          <a 
+                            href={project.link} 
+                            target="_blank" 
+                            rel="noopener noreferrer" 
+                            className="flex items-center gap-1"
+                          >
                             View Project <ExternalLink size={14} />
-                          </Link>
+                          </a>
                         </Button>
                       </div>
                     </div>

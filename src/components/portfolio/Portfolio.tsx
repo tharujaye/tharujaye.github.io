@@ -44,15 +44,15 @@ const Portfolio: React.FC = () => {
       id: 4,
       title: 'Energex',
       category: ['UI/UX', 'Mobile'],
-      image: '/projects/Energex_dp.jpg.jpg',
+      image: '/projects/Energex_dp.jpg',
       link: 'https://www.behance.net/gallery/224098755/Energex-Electricity-Management-App',          
     },
     {
       id: 5,
       title: 'BraveSpace',
       category: ['UI/UX', 'Mobile'],
-      image: '/placeholder.svg',
-      link: 'https://www.behance.net/gallery/123456789/BraveSpace', 
+      image: '/projects/BraveSpace_dp.jpg',
+      link: 'https://www.behance.net/gallery/224099153/BraveSpace-Thearaphy-app', 
     },
     {
       id: 6,
