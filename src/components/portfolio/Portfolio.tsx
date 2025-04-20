@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import AnimatedSection from '../shared/AnimatedSection';
@@ -23,42 +22,42 @@ const Portfolio: React.FC = () => {
       title: 'EcoNest',
       category: ['UI/UX', 'Mobile'],
       image: '/projects/EcoNest_dp.jpg',
-      link: '/portfolio/finance-dashboard',
+      link: 'https://www.behance.net/gallery/222419661/EcoNest', 
     },
     {
       id: 2,
       title: 'LifeTrack',
       category: ['UI/UX', 'Mobile'],
       image: '/projects/LifeTrack_dp.jpg',
-      link: '/portfolio/ecommerce-app',
+      link: 'https://www.behance.net/gallery/222508327/LifeTrack', 
     },
     {
       id: 3,
-      title: 'Ceytique',
-      category: ['Branding'],
-      image: '/projects/Ceytique_dp.jpg',
-      link: '/portfolio/corporate-rebrand',
+      title: 'Eventide',
+      category: ['UI/UX', 'Web'],
+      image: '/projects/Eventide_dp.jpg',
+      link: 'https://www.behance.net/gallery/224089101/Eventide-Event-booking-app',
     },
     {
       id: 4,
-      title: 'Eventide',
-      category: ['UI/UX', 'Web'],
-      image: '/placeholder.svg',
-      link: '/portfolio/social-media-platform',
+      title: 'Ceytique',
+      category: ['Branding'],
+      image: '/projects/Ceytique_dp.jpg',
+      link: 'https://ceytique.com',          
     },
     {
       id: 5,
       title: 'BraveSpace',
       category: ['UI/UX', 'Mobile'],
       image: '/placeholder.svg',
-      link: '/portfolio/restaurant-app',
+      link: 'https://www.behance.net/gallery/123456789/BraveSpace', 
     },
     {
       id: 6,
       title: 'Health Tracker Dashboard',
       category: ['UI/UX', 'Web'],
       image: '/placeholder.svg',
-      link: '/portfolio/health-tracker',
+      link: 'https://www.behance.net/gallery/123456789/Health-Tracker-Dashboard', 
     },
   ];
 
