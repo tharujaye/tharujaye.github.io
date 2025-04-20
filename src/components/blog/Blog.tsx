@@ -41,26 +41,7 @@ const Blog: React.FC = () => {
       image: '/blogs/lofi_music_dp.jpg',
       slug: 'https://medium.com/@tharujaye/lofi-music-for-productivity-c068b1d51533',
     },
-    {
-      id: 3,
-      title: 'The Role of Animation in User Experience',
-      excerpt: 'How thoughtful animation can enhance user experience and guide users through complex interfaces.',
-      date: 'Feb 12, 2025',
-      readTime: '5 min read',
-      category: 'Animation',
-      image: '/placeholder.svg',
-      slug: 'animation-in-ux',
-    },
-    {
-      id: 4,
-      title: 'Optimizing React Performance for Large Applications',
-      excerpt: 'Tips and techniques for improving the performance of React applications as they grow in complexity.',
-      date: 'Jan 30, 2025',
-      readTime: '10 min read',
-      category: 'Development',
-      image: '/placeholder.svg',
-      slug: 'react-performance',
-    },
+ 
   ];
 
   return (
