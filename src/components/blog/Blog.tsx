@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
@@ -21,26 +20,26 @@ interface BlogPost {
 const Blog: React.FC = () => {
   const featuredPost: BlogPost = {
     id: 1,
-    title: 'The Future of UI Design: Trends to Watch in 2025',
-    excerpt: 'Explore emerging UI design trends that will shape the digital landscape in the coming year, from advanced micro-interactions to neomorphic design elements.',
-    date: 'Mar 15, 2025',
-    readTime: '6 min read',
-    category: 'UI/UX Design',
-    image: '/placeholder.svg',
-    slug: 'future-of-ui-design',
+    title: 'Typography Best Practices for Web Design: The Silent Workhorse of UX',
+    excerpt: 'Typography is the silent workhorse of web design. It guides your eyes, sets the tone, builds trust, and most importantly it gets read. And if you’re a designer, ignoring typography is like building a Ferrari and forgetting the engine.',
+    date: 'Apr 16, 2025',
+    readTime: '3 min read',
+    category: 'UI/UX Design, Typography',
+    image: '/blogs/typography_dp.jpg',
+    slug: 'https://medium.com/@tharujaye/typography-best-practices-for-web-design-the-silent-workhorse-of-ux-4fe1f9275507',
     featured: true,
   };
 
   const blogPosts: BlogPost[] = [
     {
       id: 2,
-      title: 'How to Implement Design Systems at Scale',
-      excerpt: 'A practical guide to creating, implementing, and maintaining design systems for large organizations.',
-      date: 'Feb 28, 2025',
-      readTime: '8 min read',
-      category: 'Design Systems',
-      image: '/placeholder.svg',
-      slug: 'design-systems-at-scale',
+      title: 'Lofi Music for productivity',
+      excerpt: 'Lofi music has a magical way of wrapping around your thoughts, creating a cocoon of focus where creativity flows effortlessly. But what is it about these laid-back beats that make them such a powerful productivity tool?',
+      date: 'Mar 15, 2025',
+      readTime: '3 min read',
+      category: 'Productivity, Music',
+      image: '/blogs/lofi_music_dp.jpg',
+      slug: 'https://medium.com/@tharujaye/lofi-music-for-productivity-c068b1d51533',
     },
     {
       id: 3,
@@ -87,9 +86,14 @@ const Blog: React.FC = () => {
             <div>
               <span className="text-sm px-3 py-1 bg-secondary rounded-full">{featuredPost.category}</span>
               <h3 className="text-2xl lg:text-3xl font-bold mt-4 mb-3">
-                <Link to={`/blog/${featuredPost.slug}`} className="hover:text-primary transition-colors">
+                <a
+                  href={featuredPost.slug}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-primary transition-colors"
+                >
                   {featuredPost.title}
-                </Link>
+                </a>
               </h3>
               <p className="text-muted-foreground mb-6">{featuredPost.excerpt}</p>
               
@@ -105,9 +109,13 @@ const Blog: React.FC = () => {
               </div>
               
               <Button asChild>
-                <Link to={`/blog/${featuredPost.slug}`}>
+                <a
+                  href={featuredPost.slug}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   Read Article
-                </Link>
+                </a>
               </Button>
             </div>
           </div>
@@ -123,13 +131,17 @@ const Blog: React.FC = () => {
             >
               <article className="flex flex-col h-full">
                 <div className="aspect-video overflow-hidden rounded-xl mb-4">
-                  <Link to={`/blog/${post.slug}`}>
+                  <a
+                    href={post.slug}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
                     <img 
                       src={post.image} 
                       alt={post.title} 
                       className="w-full h-full object-cover hover:scale-105 transition-transform duration-500" 
                     />
-                  </Link>
+                  </a>
                 </div>
 
                 <div className="flex items-center gap-2 mb-3">
@@ -148,22 +160,26 @@ const Blog: React.FC = () => {
                 </div>
 
                 <h3 className="text-xl font-bold mb-3">
-                  <Link 
-                    to={`/blog/${post.slug}`}
+                  <a
+                    href={post.slug}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="hover:text-primary transition-colors"
                   >
                     {post.title}
-                  </Link>
+                  </a>
                 </h3>
 
                 <p className="text-muted-foreground mb-4 flex-grow">{post.excerpt}</p>
 
-                <Link 
-                  to={`/blog/${post.slug}`}
+                <a
+                  href={post.slug}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="text-primary hover:text-primary/80 font-medium flex items-center gap-1 mt-auto"
                 >
                   Read More <MoveRight size={16} />
-                </Link>
+                </a>
               </article>
             </AnimatedSection>
           ))}

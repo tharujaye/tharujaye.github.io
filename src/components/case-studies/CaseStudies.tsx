@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Link } from 'react-router-dom';
 import AnimatedSection from '../shared/AnimatedSection';
@@ -31,16 +30,18 @@ const CaseStudyCard: React.FC<CaseStudyCardProps> = ({ study, index }) => {
       animation={isEven ? "fade-in-right" : "fade-in-left"}
       className="mb-16 lg:mb-24"
     >
-      <div className={cn(
-        "grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center",
-        !isEven && "lg:flex-row-reverse lg:[direction:rtl]"
-      )}>
+      <div
+        className={cn(
+          "grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center",
+          !isEven && "lg:flex-row-reverse lg:[direction:rtl]"
+        )}
+      >
         <div className={cn(!isEven && "lg:[direction:ltr]")}>
           <div className="relative">
             <span className="absolute -top-4 -left-4 w-20 h-20 bg-primary rounded-full opacity-10" />
-            <img 
-              src={study.image} 
-              alt={study.title} 
+            <img
+              src={study.image}
+              alt={study.title}
               className="rounded-lg shadow-lg w-full h-auto aspect-video object-cover"
             />
           </div>
@@ -50,11 +51,11 @@ const CaseStudyCard: React.FC<CaseStudyCardProps> = ({ study, index }) => {
           <h3 className="text-primary font-medium mb-2">{study.client}</h3>
           <h2 className="text-2xl lg:text-3xl font-bold mb-4">{study.title}</h2>
           <p className="text-muted-foreground mb-6">{study.description}</p>
-          
+
           <div className="flex flex-wrap gap-2 mb-6">
             {study.services.map((service, idx) => (
-              <span 
-                key={idx} 
+              <span
+                key={idx}
                 className="px-3 py-1 bg-secondary text-foreground text-sm rounded-full"
               >
                 {service}
@@ -63,9 +64,14 @@ const CaseStudyCard: React.FC<CaseStudyCardProps> = ({ study, index }) => {
           </div>
 
           <Button asChild>
-            <Link to={study.link} className="flex items-center gap-1">
+            <a
+              href={study.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-1"
+            >
               View Case Study <ArrowRight size={16} />
-            </Link>
+            </a>
           </Button>
         </div>
       </div>
@@ -77,32 +83,32 @@ const CaseStudies: React.FC = () => {
   const caseStudies: CaseStudy[] = [
     {
       id: 1,
-      title: 'Reimagining Digital Banking Experience',
+      title: 'EcoNest | Sustainable Living',
       description: 'A comprehensive redesign of the client\'s digital banking platform, focusing on simplifying complex financial data and improving user engagement.',
-      client: 'FinTech Co.',
-      services: ['UI/UX Design', 'Web Development', 'User Research'],
-      image: '/placeholder.svg',
-      link: '/portfolio/fintech-redesign',
+      client: 'EcoNest',
+      services: ['UI/UX Design', 'Mobile App Design', 'User Research'],
+      image: '/projects/case_studies/EcoNest_csdp.jpg',
+      link: 'https://www.dropbox.com/scl/fi/yorb8mrjlhfecw7vukrys/EcoNest-Presentation.pdf?rlkey=65h5augf38ms3hml4vajxqcbb&st=vwrd9kcb&dl=0',
       featured: true,
     },
     {
       id: 2,
-      title: 'E-commerce Mobile App with AR Features',
-      description: 'Designed and developed a mobile e-commerce application with augmented reality features, allowing users to visualize products in their space before purchasing.',
-      client: 'RetailPlus',
-      services: ['Mobile Design', 'AR Development', 'UI/UX'],
-      image: '/placeholder.svg',
-      link: '/portfolio/retailplus-app',
+      title: 'LifeTrack | Diet and Lifestyle Management',
+      description: 'Life Track is an innovative platform empowering individuals to take control of their health. By combining Al-driven personalization with comprehensive lifestyle management tools. we\'re revolutionizing NCD prevention and promoting healthier living.',
+      client: 'LifeTrack',
+      services: ['UI/UX Design', 'Mobile App Design', 'Healthcare'],
+      image: '/projects/case_studies/LifeTrack_csdp.jpg',
+      link: 'https://www.dropbox.com/scl/fi/i1spu1mw5p56b4propqov/LifeTrack-Presentation.pptx?rlkey=i67hyp96yw215o794y6g23f66&st=8jodr9fd&dl=0',
       featured: true,
     },
     {
       id: 3,
-      title: 'Corporate Identity Revitalization',
-      description: 'A complete rebranding project that included logo design, visual identity, brand guidelines, and website redesign for a growing tech company.',
-      client: 'TechNova',
-      services: ['Brand Strategy', 'Visual Identity', 'Web Design'],
-      image: '/placeholder.svg',
-      link: '/portfolio/technova-rebrand',
+      title: 'BraveSpace | Virtual Reality Therapy Platform',
+      description: 'Virtual reality therapy platform designed to help children aged 7-12 overcome social anxiety disorder (SAD). The platform combines basic VR technology with mobile app integration to create an accessible and engaging therapeutic environment.',
+      client: 'BraveSpace',
+      services: ['VR', 'Visual Design', 'Mobile App Design'],
+      image: '/projects/case_studies/BraveSpace_csdp.jpg',
+      link: 'https://www.dropbox.com/scl/fi/k8t499ilja6gq3si8prz4/BraveSpace-Report.pdf?rlkey=e7ytezlisgca7j1o6dfzau895&st=jgpkhght&dl=0',
       featured: true,
     },
   ];

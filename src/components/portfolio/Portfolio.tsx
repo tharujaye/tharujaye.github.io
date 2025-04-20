@@ -130,9 +130,14 @@ const ProjectCard: React.FC<{ project: Project }> = ({ project }) => {
         
         <div className="absolute inset-0 bg-foreground/60 transition-opacity opacity-0 group-hover:opacity-100 flex items-center justify-center">
           <Button asChild variant="secondary" size="sm" className="w-fit">
-            <Link to={project.link} className="flex items-center gap-1">
+            <a 
+              href={project.link} 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="flex items-center gap-1"
+            >
               View Project <ExternalLink size={14} />
-            </Link>
+            </a>
           </Button>
         </div>
       </div>
