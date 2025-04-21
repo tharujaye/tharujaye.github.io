@@ -87,8 +87,32 @@ const PortfolioPage: React.FC = () => {
       title: 'Bookshelf',
       description: 'eCommerce book store.',
       category: ['Branding'],
-      image: '/placeholder.svg',
+      image: '/projects/Bookshelf_dp.jpg',
       link: 'https://bookshelf.lk',
+    },
+    {
+      id: 9,
+      title: 'PassPorter',
+      description: 'Event Management Web App.',
+      category: ['Web'],
+      image: '/projects/PassPorter_dp.jpg',
+      link: 'https://github.com/tharujaye/TicketSystem-UI',
+    },
+    {
+      id: 10,
+      title: 'Real Time Event Ticketing System',
+      description: 'Event Ticketing Web App.',
+      category: ['Web'],
+      image: '/projects/RealTimeTickets_dp.jpg',
+      link: 'https://github.com/tharujaye/Real-Time-Event-Ticketing-System',
+    },
+    {
+      id: 11,
+      title: 'Synerger',
+      description: ' Blog page about sustainable energy.',
+      category: ['Web'],
+      image: '/projects/Synerger_dp.png',
+      link: 'https://tharujaye.github.io/synerger/',
     },
   ];
 
