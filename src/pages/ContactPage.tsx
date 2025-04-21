@@ -63,10 +63,7 @@ const ContactPage: React.FC = () => {
                     question: 'How long does a typical project take to complete?',
                     answer: 'Project timelines vary based on scope and complexity. A simple website might take 2-4 weeks, while a comprehensive application could take 8-12 weeks or more. I provide timeline estimates during our initial discussions.'
                   },
-                  {
-                    question: 'Do you offer ongoing maintenance and support?',
-                    answer: 'Yes, I offer maintenance packages and ongoing support for clients who need regular updates, monitoring, and improvements to their digital products.'
-                  }
+                                                    
                 ].map((faq, index) => (
                   <AnimatedSection 
                     key={index}
