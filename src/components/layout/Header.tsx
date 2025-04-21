@@ -58,8 +58,8 @@ const Header: React.FC = () => {
         </Link>
 
         {/* Desktop Navigation */}
-        <nav className="hidden md:flex items-center gap-6 text-foreground px-6 py-4 shadow">
-          <ul className="flex gap-6">
+        <nav className="flex items-center gap-6 text-foreground px-6 py-4 shadow">
+          <ul className="hidden md:flex gap-6">
             {navigation.map((item) => (
               <li key={item.name}>
                 <Link
@@ -77,7 +77,7 @@ const Header: React.FC = () => {
             ))}
           </ul>
 
-          <div className="flex items-center gap-4">
+          <div className="hidden md:flex items-center gap-4">
             <ThemeToggle />
             <a
               href="/TharushaJayawardenaCV.pdf"
