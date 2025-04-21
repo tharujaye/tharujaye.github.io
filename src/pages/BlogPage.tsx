@@ -1,3 +1,4 @@
+
 import React, { useEffect, useState } from 'react';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
@@ -31,7 +32,7 @@ const BlogPage: React.FC = () => {
     {
       id: 1,
       title: 'Typography Best Practices for Web Design: The Silent Workhorse of UX',
-      excerpt: 'Typography is the silent workhorse of web design. It guides your eyes, sets the tone, builds trust, and most importantly it gets read. And if you're a designer, ignoring typography is like building a Ferrari and forgetting the engine.',
+      excerpt: "Typography is the silent workhorse of web design. It guides your eyes, sets the tone, builds trust, and most importantly it gets read. And if you're a designer, ignoring typography is like building a Ferrari and forgetting the engine.",
       date: 'Apr 16, 2025',
       readTime: '3 min read',
       category: 'UI/UX Design, Typography',
