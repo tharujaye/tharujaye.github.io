@@ -27,7 +27,7 @@ const About: React.FC = () => {
               About Me
             </h2>
             <h3 className="text-3xl md:text-4xl font-bold mb-6">
-              A passionate designer &amp; developer based in Sri Lanka
+              A passionate Designer &amp; Developer based in Sri Lanka
             </h3>
             <p className="text-muted-foreground mb-6">
               With over 4 years of experience in the creative technology industry, I've had 

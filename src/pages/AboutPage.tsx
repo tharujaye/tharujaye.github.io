@@ -96,7 +96,7 @@ const AboutPage: React.FC = () => {
               <AnimatedSection animation="fade-in-left">
                 <h2 className="text-3xl font-bold mb-6">My Design Philosophy</h2>
                 <p className="text-muted-foreground mb-6">
-                  I believe that great design is about more than just aesthetics—it's about creating 
+                  I believe that great design is about more than just aesthetics, it's about creating 
                   seamless experiences that solve real problems. My approach combines user-centered 
                   design principles with technical expertise to build products that are both beautiful and functional.
                 </p>

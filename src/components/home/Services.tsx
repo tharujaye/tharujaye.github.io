@@ -52,8 +52,8 @@ const Services: React.FC = () => {
       icon: <Palette size={24} />,
     },
     {
-      title: 'Creative Direction',
-      description: 'Guiding creative vision and strategy to achieve business goals and create impact.',
+      title: 'Creative Designing',
+      description: 'Designing with creative vision and strategy to achieve business goals and create impact.',
       icon: <Lightbulb size={24} />,
     },
     {
