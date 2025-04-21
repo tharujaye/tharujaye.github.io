@@ -7,6 +7,7 @@ import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
 import { Badge } from '@/components/ui/badge';
 import { Download } from 'lucide-react';
+import VolunteerExperiences from '@/components/about/VolunteerExperiences';
 
 const AboutPage: React.FC = () => {
   // Scroll to top on page load
@@ -149,6 +150,9 @@ const AboutPage: React.FC = () => {
           </div>
         </section>
 
+        {/* Volunteer Experiences Section */}
+        <VolunteerExperiences />
+        
         {/* Education Section */}
         <section className="py-24">
           <div className="container">
