@@ -15,25 +15,44 @@ interface VolunteerExperience {
 const VolunteerExperiences: React.FC = () => {
   const experiences: VolunteerExperience[] = [
     {
-      title: 'Community Lead',
-      organization: 'Google Developer Student Club - IIT',
-      period: '2023 - Present',
-      description: 'Leading and organizing tech workshops, hackathons, and study jams to help students learn new technologies and build their skills.',
+      title: 'Design & Media Coordinator',
+      organization: 'IEEE Engineering in Medicine and Biology Society of IIT',
+      period: '2025 - Present',
+      description: 'As part of my involvement with the IEEE EMBS, I contributed to the Ignite event series, which focused on latest biomedical tech innovations. I contributed in designing visuals for the event and ensuring an engaging learning experience for participants.',
       achievements: [
-        'Organized 5+ successful technical workshops',
-        'Mentored 20+ students in web development',
-        'Grew the community from 50 to 200+ active members'
+        'Coordinated design and media for newly established Ignite event series',
       ]
     },
     {
-      title: 'Tech Mentor',
-      organization: 'Local Code Camp',
-      period: '2022 - 2023',
-      description: 'Volunteered as a programming mentor for high school students, teaching basic web development and programming concepts.',
+      title: 'Design & Media Team',
+      organization: 'Mozilla Campus Club of IIT',
+      period: '2024 - present',
+      description: 'As a volunteer for the PR and Media team in Mozilla campus club of IIT, I am contributing for the design team to design graphics and content for the events.',
       achievements: [
-        'Taught HTML, CSS, and JavaScript to 30+ students',
-        'Created learning materials and exercises',
-        'Helped organize two successful student showcases'
+        "Organized 'Dev me' event series for Figma, Data Structures, and JavaScript for students",
+        'Created design materials for the events',
+      ]
+    },
+    {
+      title: 'Public Visibility Coordinator',
+      organization: 'IEEE Robotics & Automation Society Sri Lanka Chapter',
+      period: '2024 - 2025',
+      description: 'As a PV coordinator in IEEE Robotics & Automation Society Sri Lanka Chapter, I am designing graphics and content for the events.',
+      achievements: [
+        'Designed digital media for community events',   
+        'Represented as a PV Coordinator in the chapter at national events',
+      ]
+    },
+    {
+      title: 'Design & Content Leader',
+      organization: 'IEEE Robotics & Automation Society of IIT',
+      period: '2023 - 2024',
+      description: 'As the Editorial Lead Design for the IEEE Robotics and Automation Society of IIT, I am leading and empowers designing skills for functions and events of the Society.',
+      achievements: [
+        'Led design initiatives for community events',
+        'Increased social media engagement by 40%',
+        'Collaborated with local businesses for sponsorships',
+        'Organized 2+ successful technical workshops'
       ]
     }
   ];

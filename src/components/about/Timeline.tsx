@@ -70,7 +70,7 @@ const Timeline: React.FC = () => {
     {
       year: '2022 - present',
       title: 'Freelance Graphic Designer',
-      company: 'Novix Labs',
+      company: 'Qbix Labs',
       description: 'Designing graphics, visual designs for digital marketing campaigns for various client projects.',
     }
   ];
