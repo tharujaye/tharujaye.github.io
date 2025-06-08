@@ -61,16 +61,11 @@ const Timeline: React.FC = () => {
       company: 'Tiii Jay Music',
       description: 'Producing LoFi music that blends different genres, including hip-hop, and electronic music. Released multiple singles, EPs, and albums.',
     },
-    {
-      year: '2023 - present',
-      title: 'Digital Marketing',
-      company: 'Tharu Jaye Studios',
-      description: 'Developing and executing digital marketing strategies for various clients, including social media management, content creation, and SEO optimization. Collaborated with clients to understand their goals and create tailored marketing plans.',
-    },
+        
     {
       year: '2022 - present',
       title: 'Freelance Graphic Designer',
-      company: 'Qbix Labs',
+      company: 'Tharu Jaye Studios',
       description: 'Designing graphics, visual designs for digital marketing campaigns for various client projects.',
     }
   ];
