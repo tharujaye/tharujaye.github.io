@@ -59,7 +59,7 @@ const AboutPage: React.FC = () => {
                 I create digital <span className="highlight-gradient">experiences</span> that matter
               </h2>
               <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mb-8">
-                A passionate UI/UX designer and developer with over 8 years of experience creating 
+                A passionate UI/UX designer and developer with over 4 years of experience creating 
                 beautiful, functional digital products for clients across various industries.
               </p>
             </AnimatedSection>
