@@ -1,7 +1,8 @@
 
 import React from 'react';
-import { Brush, Code, Smartphone, Layout, Lightbulb, Palette } from 'lucide-react';
+import { Brush, Code, Smartphone, Layout, Lightbulb, Palette, ExternalLink } from 'lucide-react';
 import AnimatedSection from '../shared/AnimatedSection';
+import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
 
 interface ServiceCardProps {
@@ -85,6 +86,23 @@ const Services: React.FC = () => {
             />
           ))}
         </div>
+
+        <AnimatedSection animation="fade-in" delay={800} className="text-center mt-16">
+          <Button 
+            asChild 
+            size="lg"
+            className="inline-flex items-center gap-2"
+          >
+            <a 
+              href="https://studio.tharujaye.com" 
+              target="_blank" 
+              rel="noopener noreferrer"
+            >
+              Visit My Studio
+              <ExternalLink size={16} />
+            </a>
+          </Button>
+        </AnimatedSection>
       </div>
     </section>
   );
