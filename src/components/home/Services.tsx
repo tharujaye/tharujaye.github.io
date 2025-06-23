@@ -94,7 +94,7 @@ const Services: React.FC = () => {
             className="inline-flex items-center gap-2"
           >
             <a 
-              href="https://studio.tharujaye.com" 
+              href="https://studios.tharujaye.com" 
               target="_blank" 
               rel="noopener noreferrer"
             >
