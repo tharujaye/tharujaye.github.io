@@ -85,10 +85,10 @@ const PortfolioPage: React.FC = () => {
     {
       id: 8,
       title: 'PassPorter',
-      description: 'Event Management Web App.',
+      description: 'Event management system UI built with React.',
       category: ['Web'],
       image: '/projects/PassPorter_dp.jpg',
-      link: 'https://github.com/tharujaye/TicketSystem-UI',
+      link: 'https://github.com/tharujaye/EventManagement-UI',
     },
     {
       id: 8,
