@@ -109,12 +109,29 @@ const PortfolioPage: React.FC = () => {
     {
       id: 11,
       title: 'Synerger',
-      description: ' Blog page about sustainable energy.',
+      description: 'Blog page about sustainable energy.',
       category: ['Web'],
       image: '/projects/Synerger_dp.png',
       link: 'https://tharujaye.github.io/synerger/',
     },
+    {
+      id: 11,
+      title: 'Flight Booking App',
+      description:' A flight booking CLI application that allows users to search and book flights easily.',
+      category: ['Web'],
+      image: '/projects/FlightApp_dp.jpg',
+      link: 'https://github.com/tharujaye/Flight-Booking-App',
+    },
+    {
+      id: 12,
+      title: 'Bookstore App',
+      description: 'A Client Server architecture for a bookstore platform with a wide selection of books.',
+      category: ['Web'],
+      image: '/projects/BookstoreApp_dp.jpg',
+      link: 'https://github.com/tharujaye/Bookstore_App',
+    }
   ];
+  
 
   const categories = ['all', 'UI/UX', 'Web', 'Mobile', 'Branding'];
   
