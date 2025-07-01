@@ -88,6 +88,15 @@ const Header: React.FC = () => {
               <Download size={16} />
               Resume
             </a>
+            <a
+              href="https://studios.tharujaye.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-1 border border-cyan-500 text-cyan-700 bg-cyan-50 px-4 py-2 rounded-md hover:bg-cyan-100 transition font-medium"
+              style={{ boxShadow: '0 0 0 2px rgba(6,182,212,0.15)' }}
+            >
+              Launch Studio
+            </a>
           </div>
         </nav>
 

@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Brush, Code, Smartphone, Layout, Lightbulb, Palette, ExternalLink } from 'lucide-react';
 import AnimatedSection from '../shared/AnimatedSection';
@@ -87,18 +86,20 @@ const Services: React.FC = () => {
           ))}
         </div>
 
-        <AnimatedSection animation="fade-in" delay={800} className="text-center mt-16">
+        <AnimatedSection animation={undefined} delay={800} className="text-center mt-16">
           <Button 
             asChild 
             size="lg"
-            className="inline-flex items-center gap-2"
+            className="inline-flex items-center gap-2 p-0 border-none bg-transparent shadow-none"
           >
             <a 
               href="https://studios.tharujaye.com" 
               target="_blank" 
               rel="noopener noreferrer"
+              className="flex items-center gap-1 border border-cyan-500 text-cyan-700 bg-cyan-50/60 px-4 py-2 rounded-md hover:bg-cyan-100 transition font-medium"
+              style={{ boxShadow: '0 0 0 2px rgba(6,182,212,0.15)' }}
             >
-              Visit My Studio
+              Launch Studio
               <ExternalLink size={16} />
             </a>
           </Button>
