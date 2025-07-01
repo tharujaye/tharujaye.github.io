@@ -73,25 +73,8 @@ const PortfolioPage: React.FC = () => {
       image: '/projects/FoCofi_dp.jpg',
       link: '',    
     },
-      
     {
       id: 7,
-      title: 'Ceytique',
-      description: 'Modern luxury clothing brand designed for those who seek exclusivity and style.',
-      category: ['Branding'],
-      image: '/projects/Ceytique_dp.jpg',
-      link: 'https://ceytique.com',
-    },
-    {
-      id: 8,
-      title: 'Bookshelf',
-      description: 'eCommerce book store.',
-      category: ['Branding'],
-      image: '/projects/Bookshelf_dp.jpg',
-      link: 'https://bookshelf.lk',
-    },
-    {
-      id: 9,
       title: 'PassPorter',
       description: 'Event Management Web App.',
       category: ['Web'],
@@ -99,7 +82,7 @@ const PortfolioPage: React.FC = () => {
       link: 'https://github.com/tharujaye/TicketSystem-UI',
     },
     {
-      id: 10,
+      id: 8,
       title: 'Real Time Event Ticketing System',
       description: 'Event Ticketing Web App.',
       category: ['Web'],
@@ -107,7 +90,7 @@ const PortfolioPage: React.FC = () => {
       link: 'https://github.com/tharujaye/Real-Time-Event-Ticketing-System',
     },
     {
-      id: 11,
+      id: 9,
       title: 'Synerger',
       description: 'Blog page about sustainable energy.',
       category: ['Web'],
@@ -115,7 +98,7 @@ const PortfolioPage: React.FC = () => {
       link: 'https://tharujaye.github.io/synerger/',
     },
     {
-      id: 11,
+      id: 10,
       title: 'Flight Booking App',
       description:' A flight booking CLI application that allows users to search and book flights easily.',
       category: ['Web'],
@@ -123,16 +106,39 @@ const PortfolioPage: React.FC = () => {
       link: 'https://github.com/tharujaye/Flight-Booking-App',
     },
     {
-      id: 12,
+      id: 11,
       title: 'Bookstore App',
       description: 'A Client Server architecture for a bookstore platform with a wide selection of books.',
       category: ['Web'],
       image: '/projects/BookstoreApp_dp.jpg',
       link: 'https://github.com/tharujaye/Bookstore_App',
+    },
+    {
+      id: 12,
+      title: 'Result Analysing App',
+      description: 'A CLI application that allows users to analyze and visualize their exam results.',
+      category: ['Web'],
+      image: '/projects/ResultAnalyser_dp.jpg',
+      link: 'https://github.com/tharujaye/Result-Analysing-System',
+    },
+    {
+      id: 13,
+      title: 'Ceytique',
+      description: 'Modern luxury clothing brand designed for those who seek exclusivity and style.',
+      category: ['Branding'],
+      image: '/projects/Ceytique_dp.jpg',
+      link: 'https://ceytique.com',
+    },
+    {
+      id: 14,
+      title: 'Bookshelf',
+      description: 'eCommerce book store.',
+      category: ['Branding'],
+      image: '/projects/Bookshelf_dp.jpg',
+      link: 'https://bookshelf.lk',
     }
   ];
   
-
   const categories = ['all', 'UI/UX', 'Web', 'Mobile', 'Branding'];
   
   const filteredProjects = activeFilter === 'all'
