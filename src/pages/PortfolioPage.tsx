@@ -7,6 +7,7 @@ import { Link } from 'react-router-dom';
 import { ExternalLink } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import CaseStudies from '@/components/case-studies/CaseStudies';
+import { toast } from '@/components/ui/use-toast'; // Make sure you have a toast utility
 
 interface Project {
   id: number;
@@ -75,6 +76,14 @@ const PortfolioPage: React.FC = () => {
     },
     {
       id: 7,
+      title: 'GreenSeal',
+      description: 'Organic and sustainable product marketplace connecting eco-conscious consumers with green brands.',
+      category: ['UI/UX', 'Mobile'],
+      image: '/projects/GreenSeal_dp.jpg',
+      link: '',
+    },
+    {
+      id: 8,
       title: 'PassPorter',
       description: 'Event Management Web App.',
       category: ['Web'],
@@ -120,6 +129,14 @@ const PortfolioPage: React.FC = () => {
       category: ['Web'],
       image: '/projects/ResultAnalyser_dp.jpg',
       link: 'https://github.com/tharujaye/Result-Analysing-System',
+    },
+    {
+      id: 13,
+      title: 'BoardGame',
+      description: 'A simple CLI board game built with Python.',
+      category: ['Web'],
+      image: '/projects/BoardGame_dp.jpg',
+      link: 'https://github.com/tharujaye/BoardGame',
     },
     {
       id: 13,
@@ -200,16 +217,32 @@ const PortfolioPage: React.FC = () => {
                       </div>
                       
                       <div className="absolute inset-0 bg-foreground/60 transition-opacity opacity-0 group-hover:opacity-100 flex items-center justify-center">
-                        <Button asChild variant="secondary" size="sm" className="w-fit">
-                          <a 
-                            href={project.link} 
-                            target="_blank" 
-                            rel="noopener noreferrer" 
-                            className="flex items-center gap-1"
+                        {project.link ? (
+                          <Button asChild variant="secondary" size="sm" className="w-fit">
+                            <a 
+                              href={project.link} 
+                              target="_blank" 
+                              rel="noopener noreferrer" 
+                              className="flex items-center gap-1"
+                            >
+                              View Project <ExternalLink size={14} />
+                            </a>
+                          </Button>
+                        ) : (
+                          <Button
+                            variant="secondary"
+                            size="sm"
+                            className="w-fit"
+                            onClick={() =>
+                              toast({
+                                title: "Coming Soon!",
+                                description: "This project is currently in development.",
+                              })
+                            }
                           >
                             View Project <ExternalLink size={14} />
-                          </a>
-                        </Button>
+                          </Button>
+                        )}
                       </div>
                     </div>
 
