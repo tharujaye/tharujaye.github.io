@@ -30,6 +30,16 @@ const BlogPage: React.FC = () => {
   const blogPosts: BlogPost[] = [
     {
       id: 1,
+      title: 'Designing the Future of Home Energy Monitoring: The Energex UX/UI Journey',
+      excerpt: 'In a world where energy efficiency is paramount, designing an intuitive home energy monitoring system is crucial. This article explores the UX/UI design process behind Energex, a cutting-edge home energy monitoring app.',
+      date: 'Jul 08, 2025',
+      readTime: '4 min read',
+      category: 'UI/UX Design, App Design',
+      image: '/blogs/Energex_dp.jpg',
+      slug: 'https://tharujaye.medium.com/designing-the-future-of-home-energy-monitoring-the-energex-ui-ux-journey-94c9fa3b7657',
+    },
+    {
+      id: 2,
       title: 'Typography Best Practices for Web Design: The Silent Workhorse of UX',
       excerpt: "Typography is the silent workhorse of web design. It guides your eyes, sets the tone, builds trust, and most importantly it gets read. And if you're a designer, ignoring typography is like building a Ferrari and forgetting the engine.",
       date: 'Apr 16, 2025',
@@ -39,7 +49,7 @@ const BlogPage: React.FC = () => {
       slug: 'https://medium.com/@tharujaye/typography-best-practices-for-web-design-the-silent-workhorse-of-ux-4fe1f9275507',
     },
     {
-      id: 2,
+      id: 3,
       title: 'Lofi Music for productivity',
       excerpt: 'Lofi music has a magical way of wrapping around your thoughts, creating a cocoon of focus where creativity flows effortlessly. But what is it about these laid-back beats that make them such a powerful productivity tool?',
       date: 'Mar 15, 2025',
@@ -48,18 +58,7 @@ const BlogPage: React.FC = () => {
       image: '/blogs/lofi_music_dp.jpg',
       slug: 'https://medium.com/@tharujaye/lofi-music-for-productivity-c068b1d51533',
     },
-    {
-      id: 3,
-      title: 'Designing the Future of Home Energy Monitoring: The Energex UX/UI Journey',
-      excerpt: 'In a world where energy efficiency is paramount, designing an intuitive home energy monitoring system is crucial. This article explores the UX/UI design process behind Energex, a cutting-edge home energy monitoring app.',
-      date: 'Jul 08, 2025',
-      readTime: '4 min read',
-      category: 'UI/UX Design, App Design',
-      image: '/blogs/Energex_dp.jpg',
-      slug: 'https://tharujaye.medium.com/designing-the-future-of-home-energy-monitoring-the-energex-ui-ux-journey-94c9fa3b7657',
-    }
   ];
-
   const categories = ['all', 'UI/UX Design', 'Development', 'Design Systems', 'Animation', 'Workflow'];
   
   const filteredPosts = blogPosts
