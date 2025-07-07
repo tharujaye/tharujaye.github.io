@@ -1,4 +1,3 @@
-
 import React, { useEffect, useState } from 'react';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
@@ -136,13 +135,17 @@ const BlogPage: React.FC = () => {
                   >
                     <article className="flex flex-col h-full">
                       <div className="aspect-video overflow-hidden rounded-xl mb-4">
-                        <Link to={`/blog/${post.slug}`}>
+                        <a
+                          href={post.slug}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
                           <img 
                             src={post.image} 
                             alt={post.title} 
                             className="w-full h-full object-cover hover:scale-105 transition-transform duration-500" 
                           />
-                        </Link>
+                        </a>
                       </div>
 
                       <div className="flex items-center gap-2 mb-3 flex-wrap">
@@ -161,22 +164,26 @@ const BlogPage: React.FC = () => {
                       </div>
 
                       <h3 className="text-xl font-bold mb-3">
-                        <Link 
-                          to={`/blog/${post.slug}`}
+                        <a
+                          href={post.slug}
+                          target="_blank"
+                          rel="noopener noreferrer"
                           className="hover:text-primary transition-colors"
                         >
                           {post.title}
-                        </Link>
+                        </a>
                       </h3>
 
                       <p className="text-muted-foreground mb-4 flex-grow">{post.excerpt}</p>
 
-                      <Link 
-                        to={`/blog/${post.slug}`}
+                      <a
+                        href={post.slug}
+                        target="_blank"
+                        rel="noopener noreferrer"
                         className="text-primary hover:text-primary/80 font-medium flex items-center gap-1 mt-auto"
                       >
                         Read More <MoveRight size={16} />
-                      </Link>
+                      </a>
                     </article>
                   </AnimatedSection>
                 ))
