@@ -156,8 +156,8 @@ const CaseStudies: React.FC<{ onlyFeatured?: boolean }> = ({ onlyFeatured = true
         {onlyFeatured && (
           <AnimatedSection className="text-center">
             <Button asChild size="lg" variant="outline">
-              <Link to="/portfolio" className="flex items-center gap-1">
-                Explore All Case Studies <MoveRight size={16} />
+              <Link to="/portfolio#case-studies" className="flex items-center gap-1">
+                View All Case Studies <MoveRight size={16} />
               </Link>
             </Button>
           </AnimatedSection>

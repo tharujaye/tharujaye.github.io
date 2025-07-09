@@ -183,7 +183,7 @@ const PortfolioPage: React.FC = () => {
         </section>
 
         {/* Portfolio Section */}
-        <section className="py-24">
+        <section id="portfolio" className="py-24">
           <div className="container">
             {/* Filter buttons */}
             <AnimatedSection className="flex flex-wrap justify-center gap-3 mb-12">
@@ -269,7 +269,7 @@ const PortfolioPage: React.FC = () => {
         </section>
 
         {/* Case Studies Section */}
-        <section className="py-24 bg-secondary">
+        <section id="case-studies" className="py-24 bg-secondary">
           <div className="container">
             <CaseStudies onlyFeatured={false} />
           </div>

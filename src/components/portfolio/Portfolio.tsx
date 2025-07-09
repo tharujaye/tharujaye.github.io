@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import AnimatedSection from '../shared/AnimatedSection';
 import { Button } from '@/components/ui/button';
-import { ExternalLink } from 'lucide-react';
+import { ExternalLink, MoveRight } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
 interface Project {
@@ -109,8 +109,10 @@ const Portfolio: React.FC = () => {
         </div>
 
         <AnimatedSection className="text-center mt-12">
-          <Button asChild size="lg">
-            <Link to="/portfolio">View All Projects</Link>
+          <Button asChild size="lg" variant="outline">
+            <Link to="/portfolio#portfolio" className="flex items-center gap-1">
+              View All Projects <MoveRight size={16} />
+            </Link>
           </Button>
         </AnimatedSection>
       </div>
