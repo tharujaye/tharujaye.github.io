@@ -6,8 +6,10 @@ import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
 import { ExternalLink } from 'lucide-react';
 import { cn } from '@/lib/utils';
-import CaseStudies from '@/components/case-studies/CaseStudies';
-import { toast } from '@/components/ui/use-toast'; // Make sure you have a toast utility
+import { toast } from '@/components/ui/use-toast';
+import { CaseStudy } from '@/types/CaseStudy';
+import { caseStudies } from '@/components/case-studies/CaseStudies';
+import CaseStudyCard from '@/components/case-studies/CaseStudyCard';
 
 interface Project {
   id: number;
@@ -268,7 +270,21 @@ const PortfolioPage: React.FC = () => {
         </section>
 
         {/* Case Studies Section */}
-        <CaseStudies />
+        <section className="py-24 bg-secondary">
+          <div className="container">
+            <AnimatedSection className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold mb-4">Case Studies</h2>
+              <p className="text-muted-foreground max-w-2xl mx-auto">
+                Dive deeper into selected projects where I solved complex problems and delivered exceptional results.
+              </p>
+            </AnimatedSection>
+            <div className="mb-16">
+              {caseStudies.map((study, index) => (
+                <CaseStudyCard key={study.id} study={study} index={index} />
+              ))}
+            </div>
+          </div>
+        </section>
 
         {/* CTA Section */}
         <AnimatedSection className="text-center py-20">
