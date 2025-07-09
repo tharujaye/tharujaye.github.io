@@ -153,13 +153,15 @@ const CaseStudies: React.FC<{ onlyFeatured?: boolean }> = ({ onlyFeatured = true
           ))}
         </div>
 
-        <AnimatedSection className="text-center">
-          <Button asChild size="lg" variant="outline">
-            <Link to="/portfolio" className="flex items-center gap-1">
-              Explore All Case Studies <MoveRight size={16} />
-            </Link>
-          </Button>
-        </AnimatedSection>
+        {onlyFeatured && (
+          <AnimatedSection className="text-center">
+            <Button asChild size="lg" variant="outline">
+              <Link to="/portfolio" className="flex items-center gap-1">
+                Explore All Case Studies <MoveRight size={16} />
+              </Link>
+            </Button>
+          </AnimatedSection>
+        )}
       </div>
     </section>
   );
