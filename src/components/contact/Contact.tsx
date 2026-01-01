@@ -53,6 +53,17 @@ const Contact: React.FC = () => {
     try {
       const apiKey = import.meta.env.VITE_CONTACT_API_KEY || '';
       
+      // Debug: Check if API key is loaded
+      if (!apiKey) {
+        console.error('API key is missing! Please set VITE_CONTACT_API_KEY in your .env file');
+        toast({
+          title: "Configuration Error",
+          description: "API key is not configured. Please contact the administrator.",
+          variant: "destructive",
+        });
+        return;
+      }
+      
       const response = await fetch("https://api.qbixlabs.com/send", {
         method: "POST",
         headers: {
@@ -75,9 +86,15 @@ const Contact: React.FC = () => {
           description: "Thank you for your message. I'll get back to you soon.",
         });
       } else {
-        throw new Error("Form submission failed.");
+        // Get error details from response
+        const errorData = await response.json().catch(() => ({}));
+        console.error('API Error:', response.status, errorData);
+        
+        throw new Error(`Form submission failed with status ${response.status}`);
       }
     } catch (error) {
+      console.error('Form submission error:', error);
+      
       toast({
         title: "Oops!",
         description: "Something went wrong. Please try again later.",
