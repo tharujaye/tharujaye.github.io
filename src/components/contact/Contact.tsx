@@ -90,6 +90,20 @@ const Contact: React.FC = () => {
         const errorData = await response.json().catch(() => ({}));
         console.error('API Error:', response.status, errorData);
         
+        // Check if it's a domain restriction error
+        if (response.status === 403 && errorData.error?.includes('Domain not allowed')) {
+          const isDevelopment = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1';
+          
+          toast({
+            title: isDevelopment ? "Development Mode Notice" : "Access Denied",
+            description: isDevelopment 
+              ? "This form only works on tharujaye.com. Please test on production or contact the API admin to whitelist localhost."
+              : "Unable to send message. Please contact the administrator.",
+            variant: "destructive",
+          });
+          return;
+        }
+        
         throw new Error(`Form submission failed with status ${response.status}`);
       }
     } catch (error) {
