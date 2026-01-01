@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
@@ -34,6 +34,9 @@ const formSchema = z.object({
 
 const Contact: React.FC = () => {
   const { toast } = useToast();
+  const [isLoading, setIsLoading] = useState(false);
+  const [isSuccess, setIsSuccess] = useState(false);
+  
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
@@ -44,34 +47,45 @@ const Contact: React.FC = () => {
     },
   });
 
-  function onSubmit(values: z.infer<typeof formSchema>) {
-    console.log("Form values:", values); // Debugging
-    fetch("https://formspree.io/f/mgvaqjql", {
-      method: "POST",
-      headers: {
-        Accept: "application/json",
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(values),
-    })
-      .then((response) => {
-        if (response.ok) {
-          toast({
-            title: "Message sent!",
-            description: "Thank you for your message. I'll get back to you soon.",
-          });
-          form.reset(); // Reset the form fields
-        } else {
-          throw new Error("Form submission failed.");
-        }
-      })
-      .catch(() => {
-        toast({
-          title: "Oops!",
-          description: "Something went wrong. Please try again later.",
-          variant: "destructive",
-        });
+  async function onSubmit(values: z.infer<typeof formSchema>) {
+    setIsLoading(true);
+    
+    try {
+      const apiKey = import.meta.env.VITE_CONTACT_API_KEY || '';
+      
+      const response = await fetch("https://api.qbixlabs.com/send", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "x-api-key": apiKey,
+        },
+        body: JSON.stringify({
+          name: values.name,
+          email: values.email,
+          subject: values.subject,
+          message: values.message,
+        }),
       });
+      
+      if (response.ok) {
+        setIsSuccess(true);
+        form.reset();
+        toast({
+          title: "Message sent!",
+          description: "Thank you for your message. I'll get back to you soon.",
+        });
+      } else {
+        throw new Error("Form submission failed.");
+      }
+    } catch (error) {
+      toast({
+        title: "Oops!",
+        description: "Something went wrong. Please try again later.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsLoading(false);
+    }
   }
   
   // Contact information
@@ -112,15 +126,40 @@ const Contact: React.FC = () => {
             <div className="bg-card border border-border p-8 rounded-xl shadow-sm">
               <h3 className="text-2xl font-bold mb-6">Send a Message</h3>
 
-              <Form {...form}>
-                <form
-                  onSubmit={form.handleSubmit(onSubmit)}
-                  className="space-y-6"
-                >
-                  {/* Formspree Hidden Fields */}
-                  <input type="hidden" name="_subject" value="New message from portfolio site" />
-                  <input type="hidden" name="_next" value="https://tharujaye.com/thank-you" />
-                  <input type="hidden" name="_captcha" value="false" />
+              {isSuccess ? (
+                <div className="bg-primary/10 border border-primary/20 p-6 rounded-lg text-center">
+                  <div className="mb-4">
+                    <svg
+                      className="mx-auto h-12 w-12 text-primary"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+                      />
+                    </svg>
+                  </div>
+                  <h4 className="text-xl font-bold mb-2">Message Sent Successfully!</h4>
+                  <p className="text-muted-foreground mb-4">
+                    Thank you for reaching out. I'll get back to you as soon as possible.
+                  </p>
+                  <Button
+                    onClick={() => setIsSuccess(false)}
+                    variant="outline"
+                  >
+                    Send Another Message
+                  </Button>
+                </div>
+              ) : (
+                <Form {...form}>
+                  <form
+                    onSubmit={form.handleSubmit(onSubmit)}
+                    className="space-y-6"
+                  >
 
                   {/* Name Field */}
                   <FormField
@@ -200,12 +239,17 @@ const Contact: React.FC = () => {
                     )}
                   />
 
-                  <Button type="submit" className="flex gap-2 items-center">
+                  <Button 
+                    type="submit" 
+                    className="flex gap-2 items-center"
+                    disabled={isLoading}
+                  >
                     <Send size={16} />
-                    Send Message
+                    {isLoading ? "Sending..." : "Send Message"}
                   </Button>
                 </form>
               </Form>
+              )}
             </div>
           </AnimatedSection>
 
