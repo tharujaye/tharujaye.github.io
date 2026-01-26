@@ -68,7 +68,7 @@ const Contact: React.FC = () => {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
-          "x-api-key": apiKey,
+          "ql-api-key": apiKey,
         },
         body: JSON.stringify({
           name: values.name,
