@@ -9,7 +9,7 @@ const Footer: React.FC = () => {
   return (
     <footer className="bg-secondary py-16">
       <div className="container">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-5 gap-8">
           {/* Column 1 - Logo and Info */}
           <div className="md:col-span-2">
             <h2 className="text-2xl font-heading font-bold highlight-gradient mb-4">tharujaye</h2>
@@ -104,24 +104,42 @@ const Footer: React.FC = () => {
             </ul>
           </div>
           
-          {/* Column 3 - Services */}
+          {/* Column 3 - Company */}
           <div>
-            <h3 className="text-lg font-heading font-semibold mb-4">Services</h3>
+            <h3 className="text-lg font-heading font-semibold mb-4">Company</h3>
             <ul className="space-y-2">
               <li>
-                <span className="text-foreground/70">UI/UX Design</span>
+                <a 
+                  href="https://qbixlabs.com" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="text-foreground/70 hover:text-primary transition-colors"
+                >
+                  Qbix Labs
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          {/* Column 4 - Products */}
+          <div>
+            <h3 className="text-lg font-heading font-semibold mb-4">Products</h3>
+            <ul className="space-y-2">
+              <li>
+                <a 
+                  href="https://kovariq.com" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="text-foreground/70 hover:text-primary transition-colors"
+                >
+                  Kovariq
+                </a>
               </li>
               <li>
-                <span className="text-foreground/70">Web Development</span>
+                <span className="text-foreground/70">Qbix Mail <span className="text-xs italic opacity-70">(In Dev)</span></span>
               </li>
               <li>
-                <span className="text-foreground/70">Mobile App Development</span>
-              </li>
-              <li>
-                <span className="text-foreground/70">Brand Identity</span>
-              </li>
-              <li>
-                <span className="text-foreground/70">Digital Marketing</span>
+                <span className="text-foreground/70">Qbix Book <span className="text-xs italic opacity-70">(In Dev)</span></span>
               </li>
             </ul>
           </div>
@@ -129,7 +147,7 @@ const Footer: React.FC = () => {
         
         {/* Copyright */}
         <div className="border-t border-border/50 mt-12 pt-6 text-center text-sm text-muted-foreground">
-          <p>© {currentYear} Tharu Jaye. All rights reserved.</p>
+          <p>© {currentYear} tharujaye. All rights reserved.</p>
         </div>
       </div>
     </footer>
