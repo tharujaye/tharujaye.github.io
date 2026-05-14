@@ -150,6 +150,9 @@ const AboutPage: React.FC = () => {
           </div>
         </section>
 
+        {/* Experience Timeline */}
+        <Timeline />
+
         {/* Volunteer Experiences Section */}
         <VolunteerExperiences />
         
@@ -182,8 +185,7 @@ const AboutPage: React.FC = () => {
           </div>
         </section>
 
-        {/* Experience Timeline */}
-        <Timeline />
+        
 
         {/* Call to Action */}
         <section className="py-16">

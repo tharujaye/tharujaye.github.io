@@ -33,8 +33,8 @@ const TimelineItem: React.FC<TimelineItemProps> = ({
       
       {/* Content */}
       <div className={cn(
-        'w-full',
-        isLeft ? 'pr-8 lg:pr-16 lg:pl-0' : 'lg:pl-16 lg:pr-0 pr-8'
+        'w-full lg:w-1/2',
+        isLeft ? 'pr-8 lg:pr-16 lg:pl-0' : 'lg:pl-16 lg:order-2 pr-8'
       )}>
         <div className={cn(
           'bg-card border border-border p-6 rounded-xl',
@@ -48,20 +48,31 @@ const TimelineItem: React.FC<TimelineItemProps> = ({
       </div>
       
       {/* Empty space for the other side */}
-      <div className="w-0 lg:w-full"></div>
+      <div className="hidden lg:block lg:w-1/2"></div>
     </AnimatedSection>
   );
 };
 
 const Timeline: React.FC = () => {
-  const timelineItems = [    
+  const timelineItems = [   
+    {
+      year: '2026 - present',
+      title: 'UI/UX Designer - Intern',
+      company: 'Olax Innovative Labs',
+      description: 'Designing and developing user interfaces for web applications, collaborating with team to create engaging digital experiences.',
+    },
+    {
+      year: '2025 - present',
+      title: 'Founder & Director',
+      company: 'Qbix Labs',
+      description: 'Designing & Developing to create innovative digital products and solutions for clients across various industries.',
+    },
     {
       year: '2023 - present',
       title: 'Music Producer',
       company: 'Tiii Jay Music',
       description: 'Producing LoFi music that blends different genres, including hip-hop, and electronic music. Released multiple singles, EPs, and albums.',
     },
-        
     {
       year: '2022 - present',
       title: 'Freelance Graphic Designer',
